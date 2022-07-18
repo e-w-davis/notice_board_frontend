@@ -1,7 +1,7 @@
 function Header(props) {
   return (
     <header>
-      <h1>Notice Board</h1>
+      <h1>Board of Notices</h1>
     </header>
   );
 }

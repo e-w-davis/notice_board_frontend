@@ -30,7 +30,7 @@ function App() {
 
   useEffect(() => {
     const getNotices = async () => {
-      const notices = await fetch('http://localhost:3000/notices').then(res => res.json());
+      const notices = await fetch('https://board-of-notices.herokuapp.com/notices').then(res => res.json());
       setNoticesState({ notices });
     }
 
@@ -39,7 +39,7 @@ function App() {
   }, []);
 
   const handleAdd = async (formInputs) => {
-    const newNotice = await fetch('http://localhost:3000/notices', {
+    const newNotice = await fetch('https://board-of-notices.herokuapp.com/notices', {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/json'
