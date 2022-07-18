@@ -49,6 +49,7 @@ aside {
 footer {
   grid-area: footer;
   background-color: var(--oasis-blue);
+  text-align: center;
 }
 .notice {
   border: 5px solid var(--shady-sand);

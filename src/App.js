@@ -55,9 +55,17 @@ function App() {
         [...noticesState.notices, newNotice]
       }
     ));
-
-    // handleAdd();
   }
+
+  const handleDelete = async (id) => {
+    await fetch(`https://board-of-notices.herokuapp.com/notices/${id}`, {
+      method: 'DELETE',
+    })
+    const updatedNotices = noticesState.notices.filter(notice => notice.id !== id)
+    setNoticesState({ notices: updatedNotices});
+    };
+
+
 
   return (
     <div className="App">
@@ -65,7 +73,9 @@ function App() {
         <Header />
         <Aside handleAdd={handleAdd} handleChange={handleChange} handleSubmit={handleSubmit} 
         setFormState={setFormState} formState={formState} />
-        <Main notices={noticesState.notices} />
+        <Main 
+          notices={noticesState.notices} handleDelete={handleDelete}
+        />
         <Nav />
         <Footer />
       </div>
