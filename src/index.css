@@ -96,16 +96,16 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows:
       auto /* Header */
-      minmax(200px, auto) /* Nav */
+      minmax(100px, auto) /* Nav */
       1fr /* Content */
-      minmax(75px, auto) /* Sidebar */
+      minmax(200px, auto) /* Sidebar */
       auto; /* Footer */
   }
 
   nav, aside {
     margin: 0;
   }
-  nav {
+  nav, aside {
     padding: 20px 20%
   }
 }
